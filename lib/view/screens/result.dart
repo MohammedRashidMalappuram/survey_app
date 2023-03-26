@@ -8,9 +8,15 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: 
-      SafeArea(
-        child: Center(child: Text('$values',style:const TextStyle(fontSize: 30,fontWeight: FontWeight.bold,),)),
+      body: SafeArea(
+        child: Center(
+            child: Text(
+          '$values',
+          style: const TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        )),
       ),
     );
   }

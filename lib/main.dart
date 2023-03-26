@@ -16,15 +16,15 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ProviderFile()),
-           ChangeNotifierProvider(create: (context) => ProvederFile2()),
+        ChangeNotifierProvider(create: (context) => ProvederFile2()),
       ],
-       child: MaterialApp(
+      child: MaterialApp(
         theme: ThemeData(
           primaryColor: Colors.blue,
         ),
         debugShowCheckedModeBanner: false,
         home: SurveyPage(),
-         ),
-     );
+      ),
+    );
   }
 }

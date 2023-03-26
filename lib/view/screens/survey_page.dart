@@ -6,8 +6,6 @@ import 'package:new_wey/view/screens/result.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
-
-
 class SurveyPage extends StatelessWidget {
   SurveyPage({super.key});
 
@@ -31,7 +29,6 @@ class SurveyPage extends StatelessWidget {
                 children: [
                   TextButton(
                       onPressed: (() {
-                        // setState(() {});
                         pageindex < 5
                             ? pageindex++
                             : Navigator.of(context).push(MaterialPageRoute(
@@ -42,19 +39,14 @@ class SurveyPage extends StatelessWidget {
                         'Skip',
                         style: TextStyle(color: Colors.white),
                       )),
-                  // Container(
-                  // margin: const EdgeInsets.only(left: 230, top: 10),
-                  // child:
                   Chip(
                     label: Text('$pageindex/5'),
                   ),
-                  //  ),
                 ],
               ),
               SizedBox(
                 width: double.infinity,
                 height: 180,
-               
                 child: Lottie.network(
                     'https://assets6.lottiefiles.com/packages/lf20_hxart9lz.json'),
               ),
@@ -87,7 +79,6 @@ class SurveyPage extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       return GestureDetector(
                         onTap: (() {
-                          // setState(() {});
                           buttonindex = index;
                           value.toch(index);
                         }),
@@ -122,7 +113,6 @@ class SurveyPage extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: (() {
-                    // setState(() {});
                     values.add(
                       datas['questions'][pageindex]['answers'][buttonindex],
                     );
